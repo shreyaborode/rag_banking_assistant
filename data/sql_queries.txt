@@ -1,0 +1,1574 @@
+-- 1. Get customers with savings accounts opened in the last 6 months
+SELECT * FROM customers WHERE account_type = 'savings' AND opened_date >= CURRENT_DATE - INTERVAL '6 months';
+
+-- 2. Find accounts with balance less than ₹500
+SELECT account_id, balance FROM accounts WHERE balance < 500;
+
+-- 3. Get top 10 customers with highest loan amount
+SELECT customer_id, SUM(loan_amount) as total_loans FROM loans GROUP BY customer_id ORDER BY total_loans DESC LIMIT 10;
+
+-- 4. Find inactive accounts in the last year
+SELECT account_id FROM transactions GROUP BY account_id HAVING MAX(transaction_date) < CURRENT_DATE - INTERVAL '1 year';
+
+-- 5. Count total number of fixed deposits per branch
+SELECT branch_id, COUNT(*) FROM fixed_deposits GROUP BY branch_id;
+
+-- 6. Sample banking query #6
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1030 AND l.loan_amount < 499400;
+
+-- 7. Sample banking query #7
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1035 AND l.loan_amount < 499300;
+
+-- 8. Sample banking query #8
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1040 AND l.loan_amount < 499200;
+
+-- 9. Sample banking query #9
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1045 AND l.loan_amount < 499100;
+
+-- 10. Sample banking query #10
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1050 AND l.loan_amount < 499000;
+
+-- 11. Sample banking query #11
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1055 AND l.loan_amount < 498900;
+
+-- 12. Sample banking query #12
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1060 AND l.loan_amount < 498800;
+
+-- 13. Sample banking query #13
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1065 AND l.loan_amount < 498700;
+
+-- 14. Sample banking query #14
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1070 AND l.loan_amount < 498600;
+
+-- 15. Sample banking query #15
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1075 AND l.loan_amount < 498500;
+
+-- 16. Sample banking query #16
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1080 AND l.loan_amount < 498400;
+
+-- 17. Sample banking query #17
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1085 AND l.loan_amount < 498300;
+
+-- 18. Sample banking query #18
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1090 AND l.loan_amount < 498200;
+
+-- 19. Sample banking query #19
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1095 AND l.loan_amount < 498100;
+
+-- 20. Sample banking query #20
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1100 AND l.loan_amount < 498000;
+
+-- 21. Sample banking query #21
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1105 AND l.loan_amount < 497900;
+
+-- 22. Sample banking query #22
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1110 AND l.loan_amount < 497800;
+
+-- 23. Sample banking query #23
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1115 AND l.loan_amount < 497700;
+
+-- 24. Sample banking query #24
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1120 AND l.loan_amount < 497600;
+
+-- 25. Sample banking query #25
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1125 AND l.loan_amount < 497500;
+
+-- 26. Sample banking query #26
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1130 AND l.loan_amount < 497400;
+
+-- 27. Sample banking query #27
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1135 AND l.loan_amount < 497300;
+
+-- 28. Sample banking query #28
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1140 AND l.loan_amount < 497200;
+
+-- 29. Sample banking query #29
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1145 AND l.loan_amount < 497100;
+
+-- 30. Sample banking query #30
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1150 AND l.loan_amount < 497000;
+
+-- 31. Sample banking query #31
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1155 AND l.loan_amount < 496900;
+
+-- 32. Sample banking query #32
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1160 AND l.loan_amount < 496800;
+
+-- 33. Sample banking query #33
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1165 AND l.loan_amount < 496700;
+
+-- 34. Sample banking query #34
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1170 AND l.loan_amount < 496600;
+
+-- 35. Sample banking query #35
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1175 AND l.loan_amount < 496500;
+
+-- 36. Sample banking query #36
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1180 AND l.loan_amount < 496400;
+
+-- 37. Sample banking query #37
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1185 AND l.loan_amount < 496300;
+
+-- 38. Sample banking query #38
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1190 AND l.loan_amount < 496200;
+
+-- 39. Sample banking query #39
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1195 AND l.loan_amount < 496100;
+
+-- 40. Sample banking query #40
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1200 AND l.loan_amount < 496000;
+
+-- 41. Sample banking query #41
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1205 AND l.loan_amount < 495900;
+
+-- 42. Sample banking query #42
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1210 AND l.loan_amount < 495800;
+
+-- 43. Sample banking query #43
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1215 AND l.loan_amount < 495700;
+
+-- 44. Sample banking query #44
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1220 AND l.loan_amount < 495600;
+
+-- 45. Sample banking query #45
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1225 AND l.loan_amount < 495500;
+
+-- 46. Sample banking query #46
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1230 AND l.loan_amount < 495400;
+
+-- 47. Sample banking query #47
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1235 AND l.loan_amount < 495300;
+
+-- 48. Sample banking query #48
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1240 AND l.loan_amount < 495200;
+
+-- 49. Sample banking query #49
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1245 AND l.loan_amount < 495100;
+
+-- 50. Sample banking query #50
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1250 AND l.loan_amount < 495000;
+
+-- 51. Sample banking query #51
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1255 AND l.loan_amount < 494900;
+
+-- 52. Sample banking query #52
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1260 AND l.loan_amount < 494800;
+
+-- 53. Sample banking query #53
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1265 AND l.loan_amount < 494700;
+
+-- 54. Sample banking query #54
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1270 AND l.loan_amount < 494600;
+
+-- 55. Sample banking query #55
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1275 AND l.loan_amount < 494500;
+
+-- 56. Sample banking query #56
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1280 AND l.loan_amount < 494400;
+
+-- 57. Sample banking query #57
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1285 AND l.loan_amount < 494300;
+
+-- 58. Sample banking query #58
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1290 AND l.loan_amount < 494200;
+
+-- 59. Sample banking query #59
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1295 AND l.loan_amount < 494100;
+
+-- 60. Sample banking query #60
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1300 AND l.loan_amount < 494000;
+
+-- 61. Sample banking query #61
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1305 AND l.loan_amount < 493900;
+
+-- 62. Sample banking query #62
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1310 AND l.loan_amount < 493800;
+
+-- 63. Sample banking query #63
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1315 AND l.loan_amount < 493700;
+
+-- 64. Sample banking query #64
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1320 AND l.loan_amount < 493600;
+
+-- 65. Sample banking query #65
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1325 AND l.loan_amount < 493500;
+
+-- 66. Sample banking query #66
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1330 AND l.loan_amount < 493400;
+
+-- 67. Sample banking query #67
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1335 AND l.loan_amount < 493300;
+
+-- 68. Sample banking query #68
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1340 AND l.loan_amount < 493200;
+
+-- 69. Sample banking query #69
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1345 AND l.loan_amount < 493100;
+
+-- 70. Sample banking query #70
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1350 AND l.loan_amount < 493000;
+
+-- 71. Sample banking query #71
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1355 AND l.loan_amount < 492900;
+
+-- 72. Sample banking query #72
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1360 AND l.loan_amount < 492800;
+
+-- 73. Sample banking query #73
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1365 AND l.loan_amount < 492700;
+
+-- 74. Sample banking query #74
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1370 AND l.loan_amount < 492600;
+
+-- 75. Sample banking query #75
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1375 AND l.loan_amount < 492500;
+
+-- 76. Sample banking query #76
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1380 AND l.loan_amount < 492400;
+
+-- 77. Sample banking query #77
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1385 AND l.loan_amount < 492300;
+
+-- 78. Sample banking query #78
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1390 AND l.loan_amount < 492200;
+
+-- 79. Sample banking query #79
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1395 AND l.loan_amount < 492100;
+
+-- 80. Sample banking query #80
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1400 AND l.loan_amount < 492000;
+
+-- 81. Sample banking query #81
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1405 AND l.loan_amount < 491900;
+
+-- 82. Sample banking query #82
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1410 AND l.loan_amount < 491800;
+
+-- 83. Sample banking query #83
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1415 AND l.loan_amount < 491700;
+
+-- 84. Sample banking query #84
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1420 AND l.loan_amount < 491600;
+
+-- 85. Sample banking query #85
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1425 AND l.loan_amount < 491500;
+
+-- 86. Sample banking query #86
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1430 AND l.loan_amount < 491400;
+
+-- 87. Sample banking query #87
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1435 AND l.loan_amount < 491300;
+
+-- 88. Sample banking query #88
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1440 AND l.loan_amount < 491200;
+
+-- 89. Sample banking query #89
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1445 AND l.loan_amount < 491100;
+
+-- 90. Sample banking query #90
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1450 AND l.loan_amount < 491000;
+
+-- 91. Sample banking query #91
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1455 AND l.loan_amount < 490900;
+
+-- 92. Sample banking query #92
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1460 AND l.loan_amount < 490800;
+
+-- 93. Sample banking query #93
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1465 AND l.loan_amount < 490700;
+
+-- 94. Sample banking query #94
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1470 AND l.loan_amount < 490600;
+
+-- 95. Sample banking query #95
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1475 AND l.loan_amount < 490500;
+
+-- 96. Sample banking query #96
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1480 AND l.loan_amount < 490400;
+
+-- 97. Sample banking query #97
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1485 AND l.loan_amount < 490300;
+
+-- 98. Sample banking query #98
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1490 AND l.loan_amount < 490200;
+
+-- 99. Sample banking query #99
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1495 AND l.loan_amount < 490100;
+
+-- 100. Sample banking query #100
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1500 AND l.loan_amount < 490000;
+
+-- 101. Sample banking query #101
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1505 AND l.loan_amount < 489900;
+
+-- 102. Sample banking query #102
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1510 AND l.loan_amount < 489800;
+
+-- 103. Sample banking query #103
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1515 AND l.loan_amount < 489700;
+
+-- 104. Sample banking query #104
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1520 AND l.loan_amount < 489600;
+
+-- 105. Sample banking query #105
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1525 AND l.loan_amount < 489500;
+
+-- 106. Sample banking query #106
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1530 AND l.loan_amount < 489400;
+
+-- 107. Sample banking query #107
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1535 AND l.loan_amount < 489300;
+
+-- 108. Sample banking query #108
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1540 AND l.loan_amount < 489200;
+
+-- 109. Sample banking query #109
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1545 AND l.loan_amount < 489100;
+
+-- 110. Sample banking query #110
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1550 AND l.loan_amount < 489000;
+
+-- 111. Sample banking query #111
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1555 AND l.loan_amount < 488900;
+
+-- 112. Sample banking query #112
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1560 AND l.loan_amount < 488800;
+
+-- 113. Sample banking query #113
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1565 AND l.loan_amount < 488700;
+
+-- 114. Sample banking query #114
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1570 AND l.loan_amount < 488600;
+
+-- 115. Sample banking query #115
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1575 AND l.loan_amount < 488500;
+
+-- 116. Sample banking query #116
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1580 AND l.loan_amount < 488400;
+
+-- 117. Sample banking query #117
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1585 AND l.loan_amount < 488300;
+
+-- 118. Sample banking query #118
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1590 AND l.loan_amount < 488200;
+
+-- 119. Sample banking query #119
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1595 AND l.loan_amount < 488100;
+
+-- 120. Sample banking query #120
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1600 AND l.loan_amount < 488000;
+
+-- 121. Sample banking query #121
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1605 AND l.loan_amount < 487900;
+
+-- 122. Sample banking query #122
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1610 AND l.loan_amount < 487800;
+
+-- 123. Sample banking query #123
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1615 AND l.loan_amount < 487700;
+
+-- 124. Sample banking query #124
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1620 AND l.loan_amount < 487600;
+
+-- 125. Sample banking query #125
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1625 AND l.loan_amount < 487500;
+
+-- 126. Sample banking query #126
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1630 AND l.loan_amount < 487400;
+
+-- 127. Sample banking query #127
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1635 AND l.loan_amount < 487300;
+
+-- 128. Sample banking query #128
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1640 AND l.loan_amount < 487200;
+
+-- 129. Sample banking query #129
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1645 AND l.loan_amount < 487100;
+
+-- 130. Sample banking query #130
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1650 AND l.loan_amount < 487000;
+
+-- 131. Sample banking query #131
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1655 AND l.loan_amount < 486900;
+
+-- 132. Sample banking query #132
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1660 AND l.loan_amount < 486800;
+
+-- 133. Sample banking query #133
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1665 AND l.loan_amount < 486700;
+
+-- 134. Sample banking query #134
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1670 AND l.loan_amount < 486600;
+
+-- 135. Sample banking query #135
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1675 AND l.loan_amount < 486500;
+
+-- 136. Sample banking query #136
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1680 AND l.loan_amount < 486400;
+
+-- 137. Sample banking query #137
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1685 AND l.loan_amount < 486300;
+
+-- 138. Sample banking query #138
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1690 AND l.loan_amount < 486200;
+
+-- 139. Sample banking query #139
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1695 AND l.loan_amount < 486100;
+
+-- 140. Sample banking query #140
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1700 AND l.loan_amount < 486000;
+
+-- 141. Sample banking query #141
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1705 AND l.loan_amount < 485900;
+
+-- 142. Sample banking query #142
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1710 AND l.loan_amount < 485800;
+
+-- 143. Sample banking query #143
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1715 AND l.loan_amount < 485700;
+
+-- 144. Sample banking query #144
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1720 AND l.loan_amount < 485600;
+
+-- 145. Sample banking query #145
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1725 AND l.loan_amount < 485500;
+
+-- 146. Sample banking query #146
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1730 AND l.loan_amount < 485400;
+
+-- 147. Sample banking query #147
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1735 AND l.loan_amount < 485300;
+
+-- 148. Sample banking query #148
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1740 AND l.loan_amount < 485200;
+
+-- 149. Sample banking query #149
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1745 AND l.loan_amount < 485100;
+
+-- 150. Sample banking query #150
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1750 AND l.loan_amount < 485000;
+
+-- 151. Sample banking query #151
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1755 AND l.loan_amount < 484900;
+
+-- 152. Sample banking query #152
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1760 AND l.loan_amount < 484800;
+
+-- 153. Sample banking query #153
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1765 AND l.loan_amount < 484700;
+
+-- 154. Sample banking query #154
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1770 AND l.loan_amount < 484600;
+
+-- 155. Sample banking query #155
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1775 AND l.loan_amount < 484500;
+
+-- 156. Sample banking query #156
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1780 AND l.loan_amount < 484400;
+
+-- 157. Sample banking query #157
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1785 AND l.loan_amount < 484300;
+
+-- 158. Sample banking query #158
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1790 AND l.loan_amount < 484200;
+
+-- 159. Sample banking query #159
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1795 AND l.loan_amount < 484100;
+
+-- 160. Sample banking query #160
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1800 AND l.loan_amount < 484000;
+
+-- 161. Sample banking query #161
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1805 AND l.loan_amount < 483900;
+
+-- 162. Sample banking query #162
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1810 AND l.loan_amount < 483800;
+
+-- 163. Sample banking query #163
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1815 AND l.loan_amount < 483700;
+
+-- 164. Sample banking query #164
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1820 AND l.loan_amount < 483600;
+
+-- 165. Sample banking query #165
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1825 AND l.loan_amount < 483500;
+
+-- 166. Sample banking query #166
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1830 AND l.loan_amount < 483400;
+
+-- 167. Sample banking query #167
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1835 AND l.loan_amount < 483300;
+
+-- 168. Sample banking query #168
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1840 AND l.loan_amount < 483200;
+
+-- 169. Sample banking query #169
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1845 AND l.loan_amount < 483100;
+
+-- 170. Sample banking query #170
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1850 AND l.loan_amount < 483000;
+
+-- 171. Sample banking query #171
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1855 AND l.loan_amount < 482900;
+
+-- 172. Sample banking query #172
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1860 AND l.loan_amount < 482800;
+
+-- 173. Sample banking query #173
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1865 AND l.loan_amount < 482700;
+
+-- 174. Sample banking query #174
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1870 AND l.loan_amount < 482600;
+
+-- 175. Sample banking query #175
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1875 AND l.loan_amount < 482500;
+
+-- 176. Sample banking query #176
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1880 AND l.loan_amount < 482400;
+
+-- 177. Sample banking query #177
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1885 AND l.loan_amount < 482300;
+
+-- 178. Sample banking query #178
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1890 AND l.loan_amount < 482200;
+
+-- 179. Sample banking query #179
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1895 AND l.loan_amount < 482100;
+
+-- 180. Sample banking query #180
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1900 AND l.loan_amount < 482000;
+
+-- 181. Sample banking query #181
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1905 AND l.loan_amount < 481900;
+
+-- 182. Sample banking query #182
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1910 AND l.loan_amount < 481800;
+
+-- 183. Sample banking query #183
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1915 AND l.loan_amount < 481700;
+
+-- 184. Sample banking query #184
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1920 AND l.loan_amount < 481600;
+
+-- 185. Sample banking query #185
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1925 AND l.loan_amount < 481500;
+
+-- 186. Sample banking query #186
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1930 AND l.loan_amount < 481400;
+
+-- 187. Sample banking query #187
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1935 AND l.loan_amount < 481300;
+
+-- 188. Sample banking query #188
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1940 AND l.loan_amount < 481200;
+
+-- 189. Sample banking query #189
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1945 AND l.loan_amount < 481100;
+
+-- 190. Sample banking query #190
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1950 AND l.loan_amount < 481000;
+
+-- 191. Sample banking query #191
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1955 AND l.loan_amount < 480900;
+
+-- 192. Sample banking query #192
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1960 AND l.loan_amount < 480800;
+
+-- 193. Sample banking query #193
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1965 AND l.loan_amount < 480700;
+
+-- 194. Sample banking query #194
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1970 AND l.loan_amount < 480600;
+
+-- 195. Sample banking query #195
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1975 AND l.loan_amount < 480500;
+
+-- 196. Sample banking query #196
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1980 AND l.loan_amount < 480400;
+
+-- 197. Sample banking query #197
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1985 AND l.loan_amount < 480300;
+
+-- 198. Sample banking query #198
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1990 AND l.loan_amount < 480200;
+
+-- 199. Sample banking query #199
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 1995 AND l.loan_amount < 480100;
+
+-- 200. Sample banking query #200
+SELECT c.customer_id, a.account_id, a.balance, l.loan_amount
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+LEFT JOIN loans l ON a.account_id = l.account_id
+WHERE a.status = 'active' AND a.account_type = 'savings'
+AND a.balance > 2000 AND l.loan_amount < 480000;

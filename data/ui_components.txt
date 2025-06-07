@@ -1,0 +1,402 @@
+=== Login Module ===
+Login Component 1: The login screen contains two fields—User ID and Password—with enforced validation for secure login.
+Login Component 2: The "Show Password" toggle button allows users to view their password before submission.
+Login Component 3: The "Forgot Password" link redirects to a recovery flow, verifying user ID and OTP.
+Login Component 4: Two-factor authentication is enabled using either SMS OTP or authenticator app.
+Login Component 5: The "Login" button becomes active only when both fields are filled and CAPTCHA is verified.
+Login Component 6: CAPTCHA prevents automated login attempts and appears after 2 failed logins.
+Login Component 7: Users are locked out after 5 incorrect attempts, requiring admin override.
+Login Component 8: "Remember Me" securely stores the login token on local encrypted storage.
+Login Component 9: Login error messages show specific reasons (wrong password, user inactive, etc.).
+Login Component 10: On success, session tokens are issued and dashboard is loaded.
+Login Component 11: There’s an option to switch between environments: Production, UAT, or Development.
+Login Component 12: Biometric login option (fingerprint, face) is available for authorized devices.
+Login Component 13: Admin users see an extra dropdown to select role before login.
+Login Component 14: Login screen displays last login date and time upon successful login.
+Login Component 15: Accessibility tools (screen reader, high contrast toggle) are integrated.
+Login Component 16: The session timeout warning starts a 2-minute countdown to auto-logout.
+Login Component 17: Login attempts are logged in the audit trail with IP, timestamp, and device ID.
+Login Component 18: A background image carousel shows important banking tips and announcements.
+Login Component 19: Mobile number login and OTP-only flow supported for limited roles.
+Login Component 20: API health status and system alerts are shown in a status ribbon on login screen.
+Login Component 21: All login elements are responsive and support keyboard shortcuts.
+Login Component 22: Password field enforces strong password rules: 1 capital, 1 special, 8+ chars.
+Login Component 23: Login is routed to the role-specific dashboard (Teller, Manager, Admin, etc.).
+Login Component 24: Login settings (language, contrast, timezone) are remembered per user.
+Login Component 25: A help icon in the corner links to video tutorials for first-time users.
+
+=== Dashboard Overview ===
+Dashboard Component 1: Displays a summary of key metrics — total accounts, daily transactions, open issues.
+Dashboard Component 2: The left navigation panel contains expandable sections: Accounts, Loans, Reports, Admin.
+Dashboard Component 3: A top ribbon shows real-time alerts like "KYC expired", "Overdraft triggered", etc.
+Dashboard Component 4: A personalized greeting and user role is shown in the top right corner.
+Dashboard Component 5: Quick action buttons allow opening new accounts, initiating transfers, or logging complaints.
+Dashboard Component 6: The notification bell shows unread alerts with timestamp and type.
+Dashboard Component 7: Charts show visualizations of daily cash flow, loan performance, and KPIs.
+Dashboard Component 8: Search bar allows lookup of customer ID, PAN, Account Number, or Mobile Number.
+Dashboard Component 9: The mini-calendar widget shows appointments, tasks, or scheduled audits.
+Dashboard Component 10: Tooltips guide new users on what each button or chart represents.
+Dashboard Component 11: The dashboard refreshes every 30 seconds for live metrics.
+Dashboard Component 12: Widgets can be rearranged and resized by dragging.
+Dashboard Component 13: Filters above each widget allow selecting branch, product type, or date range.
+Dashboard Component 14: Right panel shows support ticket status, customer queries, or internal memos.
+Dashboard Component 15: Recently accessed customers or modules are pinned for quick access.
+Dashboard Component 16: Reports that require attention are shown in red with a warning icon.
+Dashboard Component 17: User activity (last login, recent actions) shown in profile dropdown.
+Dashboard Component 18: Links to external dashboards (core banking, fraud systems) appear under "Integrations."
+Dashboard Component 19: System performance (CPU, memory) graphs shown for branch servers.
+Dashboard Component 20: "Switch Role" option lets authorized users toggle to their alternate roles.
+Dashboard Component 21: Language selector (English, Hindi, Marathi, etc.) for localized UI.
+Dashboard Component 22: Customer satisfaction rating (CSAT) from last 30 days shown on top bar.
+Dashboard Component 23: Global announcements (bank holiday, policy update) scroll as a banner.
+Dashboard Component 24: All widgets follow role-based visibility – tellers don’t see admin graphs.
+Dashboard Component 25: Full-screen mode available for high-focus work (e.g., audits).
+=== Customer Management ===
+Customer Component 1: Customer search allows input by customer ID, Aadhar, PAN, or phone number.
+Customer Component 2: Customer profile page includes tabs: Personal Details, Contact, Nominee, Documents.
+Customer Component 3: "Edit Details" button opens a form with auto-validation on each field.
+Customer Component 4: Profile picture and signature are stored securely and shown inline.
+Customer Component 5: Customer type is color-coded: Individual (blue), Corporate (green), Minor (orange).
+Customer Component 6: Contact details tab includes primary and secondary numbers, and verified email.
+Customer Component 7: KYC documents are uploaded in PDF or image format, max 5MB each.
+Customer Component 8: Auto-KYC checker flags missing or expired documentation with status colors.
+Customer Component 9: "Customer History" shows a timeline of interactions, updates, and transactions.
+Customer Component 10: Deceased customer status disables operations and flags account for closure.
+Customer Component 11: “Mark as VIP” adds high-priority tag for premium customers.
+Customer Component 12: All changes are logged under "Edit History" with user ID and timestamps.
+Customer Component 13: Nominee details are required and editable with OTP verification.
+Customer Component 14: Fraud markers (e.g., bounced cheques, complaints) shown with red alert badges.
+Customer Component 15: Link/Unlink Joint Accounts button available for eligible accounts.
+Customer Component 16: Address verification status shown (verified by visit, pending, or flagged).
+Customer Component 17: Clicking "Generate Statement" downloads PDF for last 3/6/12 months.
+Customer Component 18: Email button allows one-click sending of profile/statement to customer.
+Customer Component 19: Document scanner integration for auto-upload from branch hardware.
+Customer Component 20: “Send OTP” button sends secure link for customer to update info remotely.
+Customer Component 21: Customers can be tagged with labels: HNI, Gold, NRI, etc.
+Customer Component 22: Aadhaar seeding validation linked to UIDAI database.
+Customer Component 23: Blacklisted customers are flagged and access to credit is restricted.
+Customer Component 24: Auto-fill forms from Aadhar XML or CKYC database.
+Customer Component 25: Link customer to relationship manager with selection dropdown.
+
+=== Account Management ===
+Account Component 1: Account list shows all accounts by status: Active, Dormant, Closed.
+Account Component 2: Open New Account form supports Savings, Current, Salary, NRI, Minor, Joint.
+Account Component 3: “View Passbook” shows line-by-line transaction history in UI or PDF.
+Account Component 4: Account-level flags (Hold, Freeze, Debit Block) appear as badges.
+Account Component 5: Interest rate and product type shown with dynamic updates.
+Account Component 6: “Change Nominee” opens secure workflow with branch head approval.
+Account Component 7: Convert to Joint Account option with nominee/guardian fields.
+Account Component 8: Account closure is a multistep workflow needing reason + branch head approval.
+Account Component 9: Daily account limit checker shows withdrawal/transfer ceiling left.
+Account Component 10: Account dashboard shows linked FDs, loans, credit cards in one place.
+Account Component 11: Tag an account with campaign: Festival Bonus, Zero Balance, etc.
+Account Component 12: Mobile and net banking activation toggles with OTP confirmation.
+Account Component 13: Debit card issuance form auto-fills from profile and allows PIN setup.
+Account Component 14: “Cheque Book Request” form with options for quantity and delivery mode.
+Account Component 15: View previous account closure history for the customer.
+Account Component 16: Set alert preferences: SMS/email for transactions, balance drops, etc.
+Account Component 17: Currency selection available for multi-currency NRI accounts.
+Account Component 18: View service charges and tax deductions monthly/yearly.
+Account Component 19: “Reissue Passbook” option auto-fills delivery address from profile.
+Account Component 20: Auto-trigger alerts for low balance, suspicious activity.
+Account Component 21: Integration with CBS (core banking system) reflected in real time.
+Account Component 22: Remarks/notes field for branch staff visible only to internal users.
+Account Component 23: Account creation audit trail linked to source user, terminal, IP.
+Account Component 24: Pre-close FD via account page if FD is linked.
+Account Component 25: Set account as dormant/reactive using status dropdown.
+
+=== Loan Processing ===
+Loan Component 1: Start New Loan form supports Home, Education, Auto, Personal, Business loans.
+Loan Component 2: Credit score fetch from CIBIL via secure API integrated.
+Loan Component 3: Income and KYC docs upload section with pre-checks for format and clarity.
+Loan Component 4: Loan calculator dynamically shows EMI, interest, and tenure options.
+Loan Component 5: “Verify Collateral” step requires physical verification or document upload.
+Loan Component 6: Risk assessment auto-generated based on employment, credit, existing loans.
+Loan Component 7: Set interest rate manually or use auto-suggestion based on credit tier.
+Loan Component 8: “Approve Loan” button visible only to Credit Manager or higher role.
+Loan Component 9: Disbursement schedule shown visually with progress bar and transaction IDs.
+Loan Component 10: View repayment plan, last EMI paid, and prepayment options.
+Loan Component 11: Option to convert fixed loan to overdraft or restructure loan.
+Loan Component 12: Foreclosure form with branch manager and central office approval.
+Loan Component 13: View linked guarantors and co-applicants with relationship type.
+Loan Component 14: Fraud-check integration flags duplicate PANs or address anomalies.
+Loan Component 15: Disbursed amount shows breakdown: direct to seller, customer, third party.
+Loan Component 16: Insurance bundling toggle enables selling loan protection policy.
+Loan Component 17: Repayment mode: Auto debit, cheque, cash — all tracked in transaction log.
+Loan Component 18: Installment overdue warning with red banner and call-to-action.
+Loan Component 19: Status: Sanctioned, Pending, Disbursed, Overdue, Closed, Written-off.
+Loan Component 20: EMI holiday configuration for education loans with deferred start.
+Loan Component 21: View CIBIL report inline for internal use.
+Loan Component 22: Add custom approval comment visible to audit team.
+Loan Component 23: Notification sent to applicant when loan moves to next stage.
+Loan Component 24: PDF export of loan application and terms for physical submission.
+Loan Component 25: Assign loan officer or relationship manager for follow-up.
+
+=== Transaction Monitoring ===
+Transaction Component 1: Real-time transaction log updated live with filters by type/date/user.
+Transaction Component 2: View flagged transactions — high-value, international, suspicious.
+Transaction Component 3: Generate transaction reports — Daily, Weekly, Monthly, Quarterly.
+Transaction Component 4: Transaction simulator used to test test-run certain flows.
+Transaction Component 5: Bulk transaction reversal for internal errors with checker approval.
+Transaction Component 6: Search transactions by UTR, cheque number, IFSC, or note.
+Transaction Component 7: Export log to Excel or PDF with filters preserved.
+Transaction Component 8: Graph of transaction volume hour-wise and branch-wise.
+Transaction Component 9: Integration with payment gateways shows UPI, IMPS, NEFT status.
+Transaction Component 10: Pending transactions retry workflow for NEFT/RTGS failures.
+Transaction Component 11: "Dispute Transaction" button routes to dispute module.
+Transaction Component 12: Notification engine logs which customer was notified and how.
+Transaction Component 13: Multi-approval workflow for internal fund transfers.
+Transaction Component 14: Currency conversion rate locked during foreign transactions.
+Transaction Component 15: Add annotation on transaction (e.g. “manual override”, “fraud check”).
+Transaction Component 16: Alert sent to RM when VIP customer does large transaction.
+Transaction Component 17: Verify dual signature requirement for corporate accounts.
+Transaction Component 18: ATM withdrawal reports by card type or location.
+Transaction Component 19: Failed transactions log with reason code and retry attempts.
+Transaction Component 20: Role-based access to edit/rollback transactions.
+Transaction Component 21: Scheduled payments list with next due date.
+Transaction Component 22: Cheque transaction with scanned image and MICR decoding.
+Transaction Component 23: "Tag Transaction" for audit labels like audit_2024, NPA_check.
+Transaction Component 24: Link transaction to CRM record of customer complaint.
+Transaction Component 25: End-of-day reconciliation summary for teller counters.
+=== KYC & Compliance ===
+KYC Component 1: Customer KYC screen has tabs for Aadhaar, PAN, Address Proof, and Photograph.
+KYC Component 2: Auto-validation checks document expiry, format (PDF/JPG), and clarity score.
+KYC Component 3: Real-time API with UIDAI verifies Aadhaar and flags discrepancies.
+KYC Component 4: PAN validation is routed through NSDL integration.
+KYC Component 5: Address proof can be utility bill, bank statement, or rental agreement.
+KYC Component 6: Flag for re-KYC every 2 years for inactive or senior citizen customers.
+KYC Component 7: Auto-email and SMS alerts are sent 30 days before KYC expiry.
+KYC Component 8: Staff can override missing documents with proper justification and admin approval.
+KYC Component 9: Photograph upload checks for size (under 1 MB) and format, stores in S3.
+KYC Component 10: KYC Level tag shown on profile: Basic, Full, or Pending.
+KYC Component 11: Customers marked as HNI must go through video KYC.
+KYC Component 12: Compliance engine runs watchlist checks (PEP, sanctions, blacklists).
+KYC Component 13: Incomplete KYC prevents credit products from being issued.
+KYC Component 14: "KYC Pending Cases" report for branch managers every Monday.
+KYC Component 15: CKYC number field auto-populates from central registry.
+KYC Component 16: Upload timestamp and user ID logged for all documents.
+KYC Component 17: KYC retry workflow for customers with invalid or outdated documents.
+KYC Component 18: Aadhaar masking automatically applied before storing.
+KYC Component 19: "Submit to Compliance" button sends profile to central compliance team.
+KYC Component 20: Customers with overseas address undergo enhanced due diligence.
+KYC Component 21: Face match verification between photograph and video KYC.
+KYC Component 22: KYC auto-locks profile until compliance team resolves issues.
+KYC Component 23: Internal KYC audit trail preserved for 10 years per RBI norms.
+KYC Component 24: Rejection reason codes (e.g., unreadable, mismatch, expired) attached to each doc.
+KYC Component 25: Batch KYC upload allowed for corporate customers (CSV format).
+
+=== Fixed & Recurring Deposits ===
+FD Component 1: “Open New FD” form includes principal, term, payout frequency, nominee.
+FD Component 2: Interest preview updates dynamically as amount/term changes.
+FD Component 3: Choose between auto-renew, auto-close, or manual instructions.
+FD Component 4: Monthly, Quarterly, and Cumulative payout options shown as tabs.
+FD Component 5: TDS applicable shown with latest government slab details.
+FD Component 6: “Premature Withdrawal” checkbox triggers penalty calculations.
+FD Component 7: Link FD to savings account for interest payout.
+FD Component 8: “Reinvest Interest” option increases compound return estimate.
+FD Component 9: Download e-FD certificate in PDF from confirmation screen.
+FD Component 10: Summary page shows active, matured, and closed FDs with term left.
+FD Component 11: Customers above 60 years see higher interest rates automatically.
+FD Component 12: Branch manager approval required for amounts > ₹1 Crore.
+FD Component 13: Maturity instructions can be edited till 1 day before maturity.
+FD Component 14: Auto alert on FD nearing maturity sent via SMS and email.
+FD Component 15: RD creation form similar to FD but includes monthly deposit frequency.
+FD Component 16: Standing instruction creation for recurring debit setup.
+FD Component 17: Missed RD installment penalty auto-calculated with interest loss.
+FD Component 18: Partial closure not allowed for RDs; full closure only.
+FD Component 19: Account holders can view nomination details and modify them.
+FD Component 20: FD/RD interest rate table shown based on customer segment.
+FD Component 21: Online FD/RD requests come with digital signature validation.
+FD Component 22: Tax-saving FDs shown under separate tab with 5-year lock-in.
+FD Component 23: Linked loan against FD appears on FD details page.
+FD Component 24: Joint holders visible for all FDs with relationship tags.
+FD Component 25: Option to transfer matured FD proceeds to another account.
+
+=== Credit Card Management ===
+Card Component 1: Dashboard shows card number (masked), credit limit, usage, and due date.
+Card Component 2: View past statements, download PDFs month-wise.
+Card Component 3: “Apply for Card” form includes income proof, address, and preferences.
+Card Component 4: Credit limit slider available for eligible customers with auto approval.
+Card Component 5: View transactions with filters: online, POS, EMI, or international.
+Card Component 6: Block/unblock card instantly with reason dropdown.
+Card Component 7: Report lost/stolen card triggers alert to central card ops.
+Card Component 8: “Raise Dispute” button next to every transaction.
+Card Component 9: Convert large transaction into EMI in a single click.
+Card Component 10: Alerts settings for OTP, usage above x amount, foreign txn.
+Card Component 11: Add-on card management for family members.
+Card Component 12: Reward points summary, redemption history, and catalog link.
+Card Component 13: Set international usage ON/OFF toggle.
+Card Component 14: Set limits: daily spend, ATM withdrawal, or merchant category.
+Card Component 15: View interest rate and billing cycle on top bar.
+Card Component 16: Pay credit card bill via net banking, UPI, or standing instruction.
+Card Component 17: Link card to mobile wallet (GPay, Paytm) with QR validation.
+Card Component 18: “Temporary Block” option for 7 or 30 days.
+Card Component 19: View declined transactions and reason (limit exceeded, CVV wrong, etc).
+Card Component 20: Virtual card details visible with expiry and CVV toggle.
+Card Component 21: Green card tag for low carbon credit cards.
+Card Component 22: Track delivery status of physical card with courier ID.
+Card Component 23: Download welcome kit PDF with T&Cs.
+Card Component 24: View CIBIL impact from missed payments.
+Card Component 25: Raise upgrade request from Silver to Gold/Platinum.
+
+=== Reports and Analytics ===
+Reports Component 1: “Branch Performance Report” shows daily transactions, revenue, footfall.
+Reports Component 2: “Cash Flow Report” includes inflow, outflow, overdrafts, idle cash.
+Reports Component 3: “KYC Compliance Report” filters by expiry date, pending documents.
+Reports Component 4: “High-Value Transactions Report” with drill-down by user/account.
+Reports Component 5: “Loan Portfolio Quality Report” segments by overdue days, type.
+Reports Component 6: All reports can be scheduled via cron-like scheduler.
+Reports Component 7: Export options: Excel, PDF, CSV with watermarking.
+Reports Component 8: Reports emailed to group with access-based links.
+Reports Component 9: Graph and table toggle for all reports.
+Reports Component 10: Download logs stored for audit.
+Reports Component 11: Filters can be saved and named for future reuse.
+Reports Component 12: Scheduled reports appear in notification bell.
+Reports Component 13: User Report shows login frequency, modules accessed.
+Reports Component 14: Ticket Reports show number of queries resolved per user.
+Reports Component 15: Report builder allows drag-drop metric selection.
+Reports Component 16: Access to reports is role-based (Teller, Manager, Zonal Head).
+Reports Component 17: Filter by branch, zone, user role, or campaign.
+Reports Component 18: BI dashboard integration (Tableau/PowerBI) for advanced metrics.
+Reports Component 19: “Export with Notes” includes user-written annotations.
+Reports Component 20: “Compliance Heatmap” visualizes branch-wise risk exposure.
+Reports Component 21: Daily auto-generated “ATM Cash Status” report.
+Reports Component 22: Customer feedback report from app and survey integration.
+Reports Component 23: “Dormant Account Tracker” report weekly.
+Reports Component 24: Loan NPA summary with early warning tags.
+Reports Component 25: Tax deduction summary for interest, TDS, GST, and charges.
+
+=== Audit Trail and Logs ===
+Audit Component 1: All user actions are logged with timestamp, user ID, and IP.
+Audit Component 2: Logs are stored in tamper-proof encrypted format (WORM storage).
+Audit Component 3: “Audit Logs Viewer” allows search by module, user, or date.
+Audit Component 4: Export logs to Excel for offline review by compliance team.
+Audit Component 5: Show old value → new value on each update (e.g., nominee, address).
+Audit Component 6: Branch managers get weekly activity reports.
+Audit Component 7: Deletion actions require double approval and are flagged.
+Audit Component 8: “Session Replay” lets admins view UI actions for selected logs.
+Audit Component 9: Failed login attempts stored with device info.
+Audit Component 10: “Who Accessed This Customer” report available.
+Audit Component 11: Logs archived monthly and stored for 10 years.
+Audit Component 12: Filters: Login, Edit, View, Approve, Download.
+Audit Component 13: Critical actions (loan disbursement, FD closure) require OTP and are tagged.
+Audit Component 14: “Anomaly Detection” tags suspicious user behavior (e.g. 500+ edits in 1 day).
+Audit Component 15: Download limit of 500 logs/day for offline review.
+Audit Component 16: Audit logs shown for internal and API access.
+Audit Component 17: Custom alerts configured for high-risk actions (e.g., export of KYC docs).
+Audit Component 18: Integration with SIEM system for external monitoring.
+Audit Component 19: “Impersonate User” action (for support) logged with full trace.
+Audit Component 20: Logs include terminal ID and geo-location where applicable.
+Audit Component 21: Red flags: User editing profile they did not create.
+Audit Component 22: Report of log gaps or data corruption triggers red alert.
+Audit Component 23: PDF audit summary generated per branch/month.
+Audit Component 24: Backup copies sent to compliance archive every midnight.
+Audit Component 25: Security group and permissions changes logged separately.
+Admin Component 1: Role Management screen allows creation, deletion, and editing of user roles.
+Admin Component 2: Permissions matrix defines module-level access for each role.
+Admin Component 3: “Assign Branch” section links users to one or more branches.
+Admin Component 4: Password policies set: min 12 chars, expiry in 45 days, no reuse.
+Admin Component 5: “User Lock/Unlock” action visible to admins with regional scope.
+Admin Component 6: Admin dashboard shows user stats: active, idle, locked, expired.
+Admin Component 7: User impersonation tool for troubleshooting comes with session logs.
+Admin Component 8: “Broadcast Announcement” sends popup messages to all users.
+Admin Component 9: Login history table stores device ID, location, time for every login.
+Admin Component 10: “View Change History” shows which admin changed what role or access.
+Admin Component 11: System-wide config: session timeout, maintenance window, OTP expiry.
+Admin Component 12: Create sandbox environments to test workflows before production.
+Admin Component 13: “Create Approval Flow” lets admins define multi-level approvals.
+Admin Component 14: Admins can reset two-factor devices remotely.
+Admin Component 15: IP Whitelisting enforced for admin users.
+Admin Component 16: External auditor access granted with expiry timestamp.
+Admin Component 17: Admins can revoke access to reports, logs, or specific modules.
+Admin Component 18: Activity report includes failed login, excessive download, and flag triggers.
+Admin Component 19: “Deactivate User” prevents login but retains logs and ownerships.
+Admin Component 20: Custom dashboards can be created for different admin roles.
+
+=== Ticketing / Helpdesk ===
+Ticketing Component 1: “Raise a Ticket” option available from every screen (bottom bar).
+Ticketing Component 2: Categories include UI Issue, Login Failure, Transaction Error, Feature Request.
+Ticketing Component 3: Auto-assigns tickets based on tags to right department.
+Ticketing Component 4: SLA tracker color codes tickets: Green (<24h), Yellow (24-72h), Red (>72h).
+Ticketing Component 5: Tickets can be created by user, system (auto-flag), or admin.
+Ticketing Component 6: Attachments (screenshot, logs) allowed while raising tickets.
+Ticketing Component 7: Ticket status: Open, Assigned, In Progress, Awaiting Response, Closed.
+Ticketing Component 8: Escalation matrix triggers if ticket not resolved in SLA.
+Ticketing Component 9: “Customer Feedback” requested after ticket closure.
+Ticketing Component 10: Filter by tags: UI, Backend, SQL, Network, Authentication.
+Ticketing Component 11: Comment thread between user and support staff.
+Ticketing Component 12: All ticket actions timestamped.
+Ticketing Component 13: “Similar Tickets” suggested to prevent duplicates.
+Ticketing Component 14: Support engineers can mark ticket as “Known Issue”.
+Ticketing Component 15: Admin dashboard includes average resolution time and CSAT.
+Ticketing Component 16: “Reopen Ticket” allowed within 3 days of closure.
+Ticketing Component 17: Tickets linked to modules, users, and sessions.
+Ticketing Component 18: “Assign to Me” action for support engineers.
+Ticketing Component 19: Email & push notification on every update.
+Ticketing Component 20: Export ticket report for audit purposes.
+
+=== User Settings & Preferences ===
+User Component 1: Profile settings allow name, phone, email, branch, and language.
+User Component 2: Language options include English, Hindi, Marathi, and Tamil.
+User Component 3: Theme settings: Light, Dark, High Contrast.
+User Component 4: Two-Factor Authentication settings with OTP and Authenticator app.
+User Component 5: Set default homepage: Dashboard, Accounts, or Tasks.
+User Component 6: Daily digest setting: Summary email with pending tasks, alerts.
+User Component 7: Privacy options allow hiding transaction values on public screens.
+User Component 8: Notification settings: toggle for SMS, Email, Pop-up.
+User Component 9: Password reset via security questions or linked phone.
+User Component 10: Biometrics login option for Windows Hello / macOS TouchID.
+User Component 11: Enable/disable quick shortcuts (F1-F12) per user.
+User Component 12: “Linked Devices” screen shows logged-in browsers and locations.
+User Component 13: Logout from all sessions with one click.
+User Component 14: Set working hours and holidays for auto-availability.
+User Component 15: “Auto Logout Timer” can be set from 5 to 30 mins.
+User Component 16: Choose between table or card view for all lists.
+User Component 17: “Recent Actions” shows last 10 module accesses.
+User Component 18: Feedback form shown every 30 days for UI suggestions.
+User Component 19: Set keyboard shortcuts: Save (Ctrl+S), Search (Ctrl+F), etc.
+User Component 20: Export settings as JSON to apply on other machines.
+
+=== Integration / Third-Party Systems ===
+Integration Component 1: Core Banking System (CBS) sync every 30 seconds for real-time updates.
+Integration Component 2: CRM platform integration shows customer lead, interaction history.
+Integration Component 3: Aadhaar and PAN APIs via NSDL/UIDAI with fallback.
+Integration Component 4: Credit bureau integration with CIBIL, Equifax.
+Integration Component 5: GSTIN validation API used during current account onboarding.
+Integration Component 6: PDF generation library integrated for certificates, statements.
+Integration Component 7: Email & SMS providers (Twilio, Karix) with failover logic.
+Integration Component 8: Mobile App data sync with backend every 10 seconds.
+Integration Component 9: UPI and IMPS gateway plugins for real-time payments.
+Integration Component 10: Video KYC via integrated WebRTC and identity tools.
+Integration Component 11: Fraud detection APIs (velocity, device mismatch, location anomaly).
+Integration Component 12: External accounting software (Tally, Zoho Books) plugin.
+Integration Component 13: Helpdesk (Freshdesk, Jira) tickets embedded inside platform.
+Integration Component 14: E-signature provider (Digio, AdobeSign) for contracts.
+Integration Component 15: Document OCR library used to auto-fill forms.
+Integration Component 16: SMS alerts translated via Google Translate API for localization.
+Integration Component 17: BI dashboards embedded from Tableau or Power BI.
+Integration Component 18: Secure webhook framework for external trigger handling.
+Integration Component 19: SSO integration with LDAP, Azure AD, and Okta.
+Integration Component 20: Webhook failure retries up to 5 times with exponential backoff.
+
+=== Accessibility Features ===
+Accessibility Component 1: WCAG 2.1 compliant UI with keyboard navigation.
+Accessibility Component 2: Font size adjuster: Small, Medium, Large, XL.
+Accessibility Component 3: Screen reader compatibility tested with NVDA and JAWS.
+Accessibility Component 4: Colorblind themes (Protanopia, Deuteranopia, Tritanopia).
+Accessibility Component 5: Live captions for video KYC and tutorials.
+Accessibility Component 6: Voice command support for common tasks (beta).
+Accessibility Component 7: “Focus Mode” disables background noise and ads.
+Accessibility Component 8: Alternative text for all icons and buttons.
+Accessibility Component 9: Auto-form filling with saved templates.
+Accessibility Component 10: Motion reduction toggle disables UI animations.
+Accessibility Component 11: Touchscreen accessibility mode with large tap areas.
+Accessibility Component 12: Contrast analyzer tool available in settings.
+Accessibility Component 13: Smart form validation with error hints and tooltips.
+Accessibility Component 14: Timeout reminders with audio and vibration alerts.
+Accessibility Component 15: Dyslexia-friendly font mode (OpenDyslexic).
+Accessibility Component 16: All documents downloadable in tagged PDF format.
+Accessibility Component 17: “Enable Hints” toggle to explain complex fields.
+Accessibility Component 18: User onboarding tutorials with voice + highlight.
+Accessibility Component 19: “Magnifier” tool built-in to zoom components.
+Accessibility Component 20: Accessibility audit tool integrated for admin.
