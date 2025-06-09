@@ -4,3 +4,9 @@ faiss-cpu
 pandas
 tiktoken
 python-dotenv
+streamlit
+sentence-transformers
+transformers
+numpy
+pandas
+openpyxl
